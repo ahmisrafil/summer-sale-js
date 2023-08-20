@@ -23,6 +23,11 @@ function handleClickCard(target) {
     if (total >= 200) {
         btnApply.disabled = false;
     }
+    // enable make purchase button 
+    const btnPurchase = document.getElementById('purchase');
+    if (total >= 0) {
+        btnPurchase.disabled = false;
+    }
 }
 
 function handleClickApply(target) {
@@ -40,3 +45,8 @@ function handleClickApply(target) {
         document.getElementById('coupon-code').value = '';
     }
 }
+
+document.getElementById('go-home').addEventListener('click', function(){
+    location.reload();
+})
+
